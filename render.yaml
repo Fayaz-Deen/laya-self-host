@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: laya-self-host
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: LAYA_HOST
+        value: 0.0.0.0
+      - key: LAYA_DEVICE
+        value: cpu
+      - key: LAYA_PRELOAD
+        value: "1"
